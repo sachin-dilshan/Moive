@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Payment_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9876d5bb-4e80-4e6e-bb32-4232177ee6b0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (19)"/>
+	<queryString language="SQL">
+		<![CDATA[select *from payment crodd join reservation using (PeyID)]]>
+	</queryString>
+	<field name="PeyID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PeyID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="Amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="RID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="RID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="CustID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CustID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="SeatCount" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="SeatCount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="MovieID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MovieID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="RstDate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="RstDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<field name="RstTime" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="RstTime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+	</field>
+	<group name="PeyID">
+		<groupExpression><![CDATA[$F{PeyID}]]></groupExpression>
+	</group>
+	<group name="Amount">
+		<groupExpression><![CDATA[$F{Amount}]]></groupExpression>
+	</group>
+	<group name="RID">
+		<groupExpression><![CDATA[$F{RID}]]></groupExpression>
+	</group>
+	<group name="CustID">
+		<groupExpression><![CDATA[$F{CustID}]]></groupExpression>
+	</group>
+	<group name="SeatCount">
+		<groupExpression><![CDATA[$F{SeatCount}]]></groupExpression>
+	</group>
+	<group name="MovieID">
+		<groupExpression><![CDATA[$F{MovieID}]]></groupExpression>
+	</group>
+	<group name="RstDate">
+		<groupExpression><![CDATA[$F{RstDate}]]></groupExpression>
+	</group>
+	<group name="RstTime">
+		<groupExpression><![CDATA[$F{RstTime}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="63" uuid="9aca8e2c-c2c8-4c98-a777-47715a276012"/>
+				<textElement textAlignment="Center">
+					<font size="50"/>
+				</textElement>
+				<text><![CDATA[Payment Details]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="72" height="30" uuid="5e716e39-2e4d-4a53-a8b0-b055bf8702a6"/>
+				<textFieldExpression><![CDATA[$F{PeyID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="10" width="69" height="30" uuid="1b54e195-2a34-472d-9530-2ec827026d90"/>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="10" width="69" height="30" uuid="d26868ae-a442-429c-82ac-120594cafa7c"/>
+				<textFieldExpression><![CDATA[$F{RID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="10" width="69" height="30" uuid="f1df4d1a-e259-4c2b-a4d4-79746570f285"/>
+				<textFieldExpression><![CDATA[$F{CustID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="10" width="69" height="30" uuid="5ec1431d-94da-4409-917b-17d61b790f5a"/>
+				<textFieldExpression><![CDATA[$F{SeatCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="10" width="69" height="30" uuid="79b90822-c432-4f88-8abd-7ef7a3cdfebf"/>
+				<textFieldExpression><![CDATA[$F{MovieID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="10" width="69" height="30" uuid="9f4d0895-e047-4731-b25c-02a35f50839b"/>
+				<textFieldExpression><![CDATA[$F{RstDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="10" width="69" height="30" uuid="526ee216-4db3-417c-bdf4-32855ef55442"/>
+				<textFieldExpression><![CDATA[$F{RstTime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="183">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="0" width="545" height="180" uuid="93a091b0-12db-454c-a501-1a0ae80b394d"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{RID}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Amount}]]></valueExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{Amount}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{RID}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Amount}]]></valueExpression>
+						<labelExpression><![CDATA[$F{CustID}]]></labelExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{PeyID}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{RID}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Amount}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</columnFooter>
+</jasperReport>

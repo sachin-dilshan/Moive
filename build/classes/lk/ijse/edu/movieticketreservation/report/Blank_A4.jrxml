@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="31ae8edf-2e4e-45c1-ae2a-4e44d85e0189">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (20)"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="e21dbfaa-362f-4ecb-bf18-11314493b279">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (21)"/>
+		<queryString language="SQL">
+			<![CDATA[ select *from payment crodd join reservation using (PeyID)]]>
+		</queryString>
+		<field name="PeyID" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PeyID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+		</field>
+		<field name="Amount" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.label" value="Amount"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+		</field>
+		<field name="RID" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="RID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+		</field>
+		<field name="CustID" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="CustID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+		</field>
+		<field name="SeatCount" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="SeatCount"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+		</field>
+		<field name="MovieID" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="MovieID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+		</field>
+		<field name="RstDate" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="RstDate"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+		</field>
+		<field name="RstTime" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="RstTime"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="reservation"/>
+		</field>
+		<group name="PeyID">
+			<groupExpression><![CDATA[$F{PeyID}]]></groupExpression>
+		</group>
+		<group name="Amount">
+			<groupExpression><![CDATA[$F{Amount}]]></groupExpression>
+		</group>
+		<group name="RID">
+			<groupExpression><![CDATA[$F{RID}]]></groupExpression>
+		</group>
+		<group name="CustID">
+			<groupExpression><![CDATA[$F{CustID}]]></groupExpression>
+		</group>
+		<group name="SeatCount">
+			<groupExpression><![CDATA[$F{SeatCount}]]></groupExpression>
+		</group>
+		<group name="MovieID">
+			<groupExpression><![CDATA[$F{MovieID}]]></groupExpression>
+		</group>
+		<group name="RstDate">
+			<groupExpression><![CDATA[$F{RstDate}]]></groupExpression>
+		</group>
+		<group name="RstTime">
+			<groupExpression><![CDATA[$F{RstTime}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select *from mealdetail crood join customer using (CustID)]]>
+	</queryString>
+	<field name="CustID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CustID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mealdetail"/>
+	</field>
+	<field name="MealID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MealID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mealdetail"/>
+	</field>
+	<field name="Qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="mealdetail"/>
+	</field>
+	<field name="CustName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CustName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="ContactNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ContactNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="Date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="Time" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="580" height="80" uuid="7ca35fe8-fd7e-4f12-8a81-4a8f6845d901"/>
+				<textElement textAlignment="Center">
+					<font size="50"/>
+				</textElement>
+				<text><![CDATA[Meal Details]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="173" splitType="Stretch">
+			<componentElement>
+				<reportElement x="-3" y="10" width="560" height="122" uuid="bfe6aef8-a79b-4a40-8e26-34e9f0cd0386">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="078a3a3a-9b1a-4cf8-99d1-0968f57f3089">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="50" uuid="81a4d552-aa3e-412a-bcb1-ebfbecbe457f">
+						<jr:tableHeader style="Table_TH" height="2"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="eab95f81-caf8-47b8-accd-398ca89e2ea7"/>
+								<text><![CDATA[PeyID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="2"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="2c1335e9-3a0c-4007-a8f2-f4fcff259121"/>
+								<textFieldExpression><![CDATA[$F{PeyID}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="57bbbb75-0dc6-47b4-92d0-0df525350e96">
+						<jr:tableHeader style="Table_TH" height="2"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="4cb2233d-f012-4019-83a6-992038c35f47"/>
+								<text><![CDATA[Amount]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="2"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="03e85f8d-bdce-4492-8c4f-b3342c74bc89"/>
+								<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="cd4786f5-2c91-4a4b-a288-63224848095c">
+						<jr:tableHeader style="Table_TH" height="2"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="3106cee6-5556-4954-8eb0-f6838394ec17"/>
+								<text><![CDATA[RID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="2"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="08eb3ae2-3647-4ee3-9140-be75e68d33ff"/>
+								<textFieldExpression><![CDATA[$F{RID}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="2c87995c-11ed-48f5-892a-186fc689bfba">
+						<jr:tableHeader style="Table_TH" height="2"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="d50a45cd-2884-4f5b-b948-7e36cae3d8b0"/>
+								<text><![CDATA[CustID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="2"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="6d628a6a-197d-4089-8698-cc09b06593f4"/>
+								<textFieldExpression><![CDATA[$F{CustID}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="8e0f5ffb-550b-429c-af17-3f738c38131d">
+						<jr:tableHeader style="Table_TH" height="2"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="ddb9154a-f5be-4329-89b0-6376e7d63194"/>
+								<text><![CDATA[SeatCount]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="2"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="7c5af65b-8c79-4bc1-b6ca-0d058bd498f9"/>
+								<textFieldExpression><![CDATA[$F{SeatCount}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="18373906-b116-48e4-826d-91fc55556a99">
+						<jr:tableHeader style="Table_TH" height="2"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="16ae0d35-1694-4d5b-898e-60b26f5710a0"/>
+								<text><![CDATA[MovieID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="2"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="c658642b-1356-463e-bce2-e24dccd73451"/>
+								<textFieldExpression><![CDATA[$F{MovieID}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="b79e806c-6551-46f2-b7f8-0614dd9f7e24">
+						<jr:tableHeader style="Table_TH" height="2"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="b3499e98-2b2e-4b98-a9c5-f11c26d69380"/>
+								<text><![CDATA[RstDate]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="2"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="fbf2bbef-2dcc-4916-a19a-bfaa0e421407"/>
+								<textFieldExpression><![CDATA[$F{RstDate}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="8e5eb52a-731f-448c-b9fb-ee7bfb989af9">
+						<jr:tableHeader style="Table_TH" height="2"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="667bca67-7032-4b22-a492-dc17f047a9a4"/>
+								<text><![CDATA[RstTime]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="2"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="298456c8-6e71-4086-8a9d-d58978b38394"/>
+								<textFieldExpression><![CDATA[$F{RstTime}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>
